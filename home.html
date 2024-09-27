@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+    <div class="flex justify-around bg-gray-100 py-9">
+
+        <div>
+            <button id="home" class="bg-lime-300 px-8 py-2 rounded-lg font-bold">Home</button>
+        </div>
+
+        <div class="flex items-center ml-3">
+            <img class="mb-2" src="assets/logo.png" alt="logo picture">
+            <p class="ml-3 font-extrabold text-lg">Donate Bangladesh</p>
+        </div>
+
+        <div>
+            <h1 class="flex items-center font-semibold">
+                <img src="assets/coin.png" alt="coin picture">
+                <span class="mx-2" id="main-blance">5500</span>
+                BDT
+            </h1>
+        </div>
+
+    </div>
+
+    <section>
+
+
+        <h1 class="mt-5 text-3xl font-bold lg:ml-44 sm:ml-1">Question and Answer :</h1>
+
+
+        <div class="lg:w-[80%] sm:w-[95%] mx-auto mt-10">
+            <!-- Accordion Item 1 -->
+            <div class="border border-gray-300 rounded-lg mb-2">
+                <button class="w-full text-left p-4 rounded-t-lg" onclick="toggleAccordion(1)">
+                    What is HTML ?
+                </button>
+                <div id="accordion-content-1" class="hidden p-4 bg-white">
+                    <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It uses a system of tags and attributes to define how text, images, links, and other elements are displayed in a browser.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="border border-gray-300 rounded-lg mb-2">
+                <button class="w-full text-left p-4 rounded-t-lg"
+                    onclick="toggleAccordion(2)">
+                    What is CSS ?
+                </button>
+                <div id="accordion-content-2" class="hidden p-4 bg-white">
+                    <p>CSS (Cascading Style Sheets) is a language used to describe the appearance and formatting of a document written in HTML or XML. While HTML is used to define the structure of a webpage, CSS is used to control the layout, colors, fonts, and other visual aspects of the elements on the page.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="border border-gray-300 rounded-lg mb-2">
+                <button class="w-full text-left p-4 rounded-t-lg"
+                    onclick="toggleAccordion(3)">
+                    What is Javascript ?
+                </button>
+                <div id="accordion-content-3" class="hidden p-4 bg-white">
+                    <p>JavaScript is a high-level, interpreted programming language that is primarily used to add interactivity, dynamic behavior, and complex functionality to websites. </p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="border border-gray-300 rounded-lg mb-2">
+                <button class="w-full text-left p-4 rounded-t-lg"
+                    onclick="toggleAccordion(4)">
+                    What is React.js ?
+                </button>
+                <div id="accordion-content-4" class="hidden p-4 bg-white">
+                    <p>React.js (or simply React) is a popular open-source JavaScript library developed by Facebook (now Meta) for building user interfaces, especially for single-page applications (SPAs).</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <script>
+        function toggleAccordion(index) {
+            var content = document.getElementById("accordion-content-" + index);
+            if (content.classList.contains("hidden")) {
+                content.classList.remove("hidden");
+            } else {
+                content.classList.add("hidden");
+            }
+        }
+
+        document.getElementById("home").addEventListener("click", function(){
+            window.location.href = "index.html";
+        })
+    </script>
+</body>
+
+</html>

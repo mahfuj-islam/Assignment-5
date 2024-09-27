@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,148 @@
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+
+    <!-- navbar -->
+    <nav class="sticky top-0 bg-white">
+
+        <div class="flex justify-around bg-gray-100 py-9">
+            
+            <div>
+                <button id="blog" class="bg-lime-300 px-8 py-2 rounded-lg font-bold">Blog</button>
+            </div>
     
+            <div class="flex items-center">
+                <img class="mb-2" src="assets/logo.png" alt="logo picture">
+                <p class="ml-3 font-extrabold text-lg">Donate Bangladesh</p>
+            </div>
+    
+            <div>
+                <h1 class="flex items-center font-semibold">
+                    <img src="assets/coin.png" alt="coin picture">
+                    <span class="mx-2" id="main-blance">5500</span>
+                     BDT
+                </h1>
+            </div>
+    
+        </div>
+
+        <div class="text-center mt-16 pb-6">
+
+            <button id="donation" class="border bg-lime-300 mr-4 px-8 py-3 rounded-lg font-bold">Donation</button>
+
+            <button id="history" class="border ml-3 px-8 py-3 rounded-lg font-bold">History</button>
+
+        </div>
+
+    </nav>
+
+    <main class="container mx-auto">
+
+        <!-- donation collection input card -->
+        <section id="donation-section" class="donation-input-card-container mt-10">
+
+            <!-- Noakhali -->
+            <div class="border rounded-lg p-7 grid lg:grid-cols-2">
+
+                <!-- image -->
+                <div>
+                    <img src="assets/noakhali.png" alt="">
+                </div>
+
+                <!-- text -->
+                <div class="mt-10 lg:mt-0">
+                    <h1 class="flex items-center font-semibold">
+                        <img src="assets/coin.png" alt="coin picture">
+                        <span class="mx-2" id="noakhali-blance">0</span>
+                         BDT
+                    </h1>
+
+                    <h1 class="font-bold mt-5">Donate for Flood at Noakhali, Bangladesh</h1>
+
+                    <p class="mt-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, Your donation will help provide essential supplies and  to those affected by this disaster. Your donation will help provide essential supplies and  to those affected by this disaster. Your donation will help provide essential supplies and  to those affected by this disaster. big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                    <input id="noakhali-amount-input" class="border rounded-md py-2 pr-36 pl-5 mt-5" type="text" placeholder="Write Donation Amount"><br>
+
+                    <button id="noakhali-btn" class="mt-5 bg-lime-300 py-3 px-32 font-bold rounded-lg">Donate Now</button>
+
+                </div>
+
+            </div>
 
 
+            <!-- Feni -->
+            <div class="border rounded-lg p-7 grid lg:grid-cols-2 mt-8">
+
+                <!-- image -->
+                <div>
+                    <img src="assets/feni.png" alt="">
+                </div>
+
+                <!-- text -->
+                <div class="mt-10 lg:mt-7">
+                    <h1 class="flex items-center font-semibold">
+                        <img src="assets/coin.png" alt="coin picture">
+                        <span class="mx-2" id="feni-blance">0</span>
+                         BDT
+                    </h1>
+
+                    <h1 class="font-bold mt-5">Donate for Flood Relief in Feni,Bangladesh</h1>
+
+                    <p class="mt-5"> The recent floods in Feni have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, Your donation will help provide essential supplies and  to those affected by this disaster. Your donation will help provide essential supplies and  to those affected by this disaster. Your donation will help provide essential supplies and  to those affected by this disaster. big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                    <input id="feni-amount-input" class="border rounded-md py-2 pr-36 pl-5 mt-5" type="text" placeholder="Write Donation Amount"><br>
+
+                    <button id="feni-btn" class="mt-5 bg-lime-300 py-3 px-32 font-bold rounded-lg">Donate Now</button>
+
+                </div>
+
+            </div>
+
+             <!-- Quota Movement -->
+             <div class="border rounded-lg p-7 grid lg:grid-cols-2 mt-8">
+
+                <!-- image -->
+                <div>
+                    <img src="assets/quota-protest.png" alt="">
+                </div>
+
+                <!-- text -->
+                <div class="mt-10 lg:mt-10">
+                    <h1 class="flex items-center font-semibold">
+                        <img src="assets/coin.png" alt="coin picture">
+                        <span class="mx-2" id="quata-blance">0</span>
+                         BDT
+                    </h1>
+
+                    <h1 class="font-bold mt-5">Aid for Injured in the Quota Movement</h1>
+
+                    <p class="mt-5"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+
+                    <input id="quata-amount-input" class="border rounded-md py-2 pr-36 pl-5 mt-5" type="text" placeholder="Write Donation Amount"><br>
+
+                    <button id="quata-btn" class="mt-5 bg-lime-300 py-3 px-32 font-bold rounded-lg">Donate Now</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--history  -->
+        <section>
+
+            <div id="amount-history" class=" hidden border-2 mt-5 rounded-lg p-5">
+                    
+            </div>
+            
+        </section>
+
+            
+
+    </main>
 
 
 
@@ -24,6 +163,8 @@
 
 
     <!-- javascript file link -->
-     <script src="index.js"></script>
+     <script src="getValue.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
